@@ -11,7 +11,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-model = joblib.load("/content/linear_model.pkl")
+model = joblib.load("linear_model.pkl")
 
 age = st.number_input("Age", min_value=0, max_value=100, value=25)
 sex = st.selectbox("Sex", ["M", "F"])
