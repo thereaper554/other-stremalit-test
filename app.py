@@ -8,9 +8,7 @@ Original file is located at
 """
 
 
-import streamlit as st
-import pandas as pd
-import joblib
+
 
 model = joblib.load("/content/linear_model.pkl")
 
