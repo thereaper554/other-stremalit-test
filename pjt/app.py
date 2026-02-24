@@ -116,3 +116,4 @@ st.write("Latest Recommendation:")
 st.success(detail_pred.tail(1)[["predicted_risk_level","recommended_action","recommended_replacement_quarter"]].to_string(index=False))
 
 
+
