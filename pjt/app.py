@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-from data import load_data, latest_period_view
+from data_utils import load_data, latest_period_view
 from alerts import make_alerts
 
 st.set_page_config(page_title="Tool Life Tracker (AI Alerts)", layout="wide")
@@ -115,3 +115,4 @@ st.plotly_chart(fig3, use_container_width=True)
 st.write("Latest Recommendation:")
 
 st.success(detail_pred.tail(1)[["predicted_risk_level","recommended_action","recommended_replacement_quarter"]].to_string(index=False))
+
