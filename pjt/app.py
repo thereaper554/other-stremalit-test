@@ -1,5 +1,3 @@
-import streamlit as st
-import pandas as pd
 import plotly.express as px
 
 from data import load_data, latest_period_view
@@ -113,4 +111,5 @@ fig3 = px.line(detail_pred, x="period_start_date", y="predicted_remaining_shots"
 st.plotly_chart(fig3, use_container_width=True)
 
 st.write("Latest Recommendation:")
+
 st.success(detail_pred.tail(1)[["predicted_risk_level","recommended_action","recommended_replacement_quarter"]].to_string(index=False))
