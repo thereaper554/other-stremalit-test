@@ -1,4 +1,3 @@
-import pandas as pd
 
 def load_data(data_dir: str = "data"):
     tool_master = pd.read_csv(f"{data_dir}/tool_master.csv", parse_dates=["sop_date", "transfer_date"], dayfirst=False)
@@ -15,4 +14,5 @@ def latest_period_view(tool_pred: pd.DataFrame) -> pd.DataFrame:
     # pick latest row per tool
     tool_pred = tool_pred.sort_values(["tool_id", "period_start_date"])
     latest = tool_pred.groupby("tool_id").tail(1).reset_index(drop=True)
+
     return latest
